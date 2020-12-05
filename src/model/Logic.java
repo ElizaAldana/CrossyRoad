@@ -4,19 +4,20 @@ import java.util.ArrayList;
 
 import processing.core.PApplet;
 
-public class Logic implements Runnable {
+public class Logic {
 	
 	public PApplet app;
-	int screen, malosList;
 	private ArrayList<Cars>malos;
 	private Person prota;
 	String[] info;
 	
 	public Logic(PApplet app) {
 		this.app = app;
-		this.screen = 0;
+		this.malos = new ArrayList<Cars>();
+
 		
-		new Thread().start(); 
+		//new Thread().start(); 
+		loadStrings();
 	}
 
 	public void loadStrings() {
@@ -38,21 +39,23 @@ public class Logic implements Runnable {
 				this.malos.add(new Cars(posX,posY,dirX,app));
 			}
 		}
+		
 	}
 	
-	public void run() {
-		loadStrings();
-		try {
-			Thread.sleep(10);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-	
+//	public void run() {
+//		loadStrings();
+//		try {
+//			Thread.sleep(10);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//	}
+//	
 	public void dibujar() {
-		for (int i = 0; i < 30; i++) {
-			this.malos.get(i).draw(); //sin esto no se pinta na'
-
-		}
+//		for (int i = 0; i < 30; i++) {
+//			this.malos.get(i).draw(); 
+//		}
+		this.prota.draw();
+		
 	}
 }

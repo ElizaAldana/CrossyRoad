@@ -12,5 +12,9 @@ public class Control {
 		this.app = app;
 		this.logic = new Logic(app);
 	}
+	
+	public void dibujar() {
+		this.logic.dibujar();
+	}
 }
 

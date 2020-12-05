@@ -13,7 +13,7 @@ public abstract class Objects {
 		this.posX = posX;
 		this.posY = posY;
 		this.dirX = dirX;
-		this.tam =15;
+		this.tam =30;
 		//this.dirX = 1;
 	}
 	
