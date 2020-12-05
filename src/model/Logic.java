@@ -11,7 +11,7 @@ public class Logic {
 	
 	public PApplet app;
 	private ArrayList<Cars>malos;
-	private Person prota;
+	Person prota;
 	String[] info;
 	private int screen;
 	
@@ -52,16 +52,16 @@ public class Logic {
 			this.malos.add(new Cars(50+(j*130),520,-1,app));
 		}
 		for (int j = 0; j < 6; j++) {
-			this.malos.add(new Cars(50+(j*130),280,-1,app));
+			this.malos.add(new Cars(50+(j*130),280,2,app));
 		}
 		for (int j = 0; j < 6; j++) {
-			this.malos.add(new Cars(70+(j*130),360,-1,app));
+			this.malos.add(new Cars(70+(j*130),360,-3,app));
 		}
 		for (int j = 0; j < 6; j++) {
-			this.malos.add(new Cars(50+(j*130),440,-1,app));
+			this.malos.add(new Cars(50+(j*130),440,1,app));
 		}
 		for (int j = 0; j < 6; j++) {
-			this.malos.add(new Cars(70+(j*130),200,-1,app));
+			this.malos.add(new Cars(70+(j*130),200,-2,app));
 		}
 	}
 //	public void run() {
@@ -81,19 +81,19 @@ public class Logic {
 		
 		for (int i = 0; i < this.malos.size(); i++) {
 			this.malos.get(i).draw(); 
+			new Thread(this.malos.get(i)).start();
 		}
 		this.prota.draw();
-		
 	}
 	
 	public void keyPressed() {
 		switch(screen) {
 		case 1:
 			if(app.key == 'A' || app.key == 'a' ) {
-				prota.moveL();
+				prota.moveR();
 			}
 			if(app.key == 'D' || app.key == 'd' ) {
-				prota.moveR();
+				prota.moveL();
 			}
 			if(app.key == 'S' || app.key == 's' ) {
 				prota.moveD();

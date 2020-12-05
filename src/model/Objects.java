@@ -2,7 +2,7 @@ package model;
 
 import processing.core.PApplet;
 
-public abstract class Objects {
+public abstract class Objects  {
 
 	
 	PApplet app;
@@ -18,7 +18,6 @@ public abstract class Objects {
 	
 	public abstract void draw();
 
-	public abstract void move();
 
 	
 	//Getters & Setters
