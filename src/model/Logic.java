@@ -123,9 +123,14 @@ public class Logic {
 		break;
 		case 2:
 			app.text(scoreGame,157,60);
-			
+			app.fill(255,0,0);
+			app.textSize(40);
+			app.text("Game Over :(", 200, 200);
 		break;
-		
+		case 3:
+			app.fill(0,255,0);
+			app.textSize(40);
+			app.text("¡Ganaste :D!", 300, 200);
 	}
 	}
 	
