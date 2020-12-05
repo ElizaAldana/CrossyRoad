@@ -8,11 +8,15 @@ public class Score {
 	PApplet app;
 	
 	public Score (int score, PApplet app) {
-		this.score=score;
+		this.score = score;
 		this.app = app;
 	}
 	
 	public void validateScore() {
-		app.text(this.score, 442, 364);
+		app.fill(0);
+		app.textSize (25);
+		app.text(this.score, 100, 30);
+		app.textSize (20);
+		app.text("Score:",30,30);
 	}
 }

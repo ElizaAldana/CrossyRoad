@@ -22,27 +22,27 @@ public class Main extends PApplet{
 	public void setup() {
 		this.controller = new Control(this);
 		this.screen = 1;
+		
 		//visualize time
 		time=0;
 		second=0;
 		timer = 0;
 			
 		//visualize score
-		scoreGame =0;
+		scoreGame = 0;
 		score = new Score(scoreGame,this);
 	}
 	
 	public void draw() {
 		background(255);
 		
-		
 		switch(screen) {
 		case 0:
 			background(255);
 			fill(0);
-			textSize(50);
-			text("Crossy Road",20,100);
-			textSize(40);
+			textSize(35);
+			text("Crossy Road",300,100);
+			textSize(25);
 			if(mouseX > width/2-40 && mouseX <= width/2+45 && mouseY >height-250 && mouseY <= height-200) {
 				fill(0);
 			}
@@ -54,11 +54,11 @@ public class Main extends PApplet{
 			text("Exit", width/2-40,height-100);
 		break;
 		case 1:
+			
 			this.controller.dibujar();
 			score.validateScore();
 		break;
 		case 2:
-			textSize (30);
 			text(scoreGame,157,60);
 	}
 	

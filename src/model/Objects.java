@@ -14,7 +14,6 @@ public abstract class Objects {
 		this.posY = posY;
 		this.dirX = dirX;
 		this.tam =30;
-		//this.dirX = 1;
 	}
 	
 	public abstract void draw();

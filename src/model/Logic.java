@@ -45,12 +45,25 @@ public class Logic {
 				}
 			}
 		}
-		for (int j = 0; j < 26; j++) {
-			this.malos.add(new Cars(50+(j*5),50,-1,app));
+		for (int j = 0; j < 6; j++) {
+			this.malos.add(new Cars(50+(j*130),120,-1,app));
 		}
-		
+		for (int j = 0; j < 6; j++) {
+			this.malos.add(new Cars(50+(j*130),520,-1,app));
+		}
+		for (int j = 0; j < 6; j++) {
+			this.malos.add(new Cars(50+(j*130),280,-1,app));
+		}
+		for (int j = 0; j < 6; j++) {
+			this.malos.add(new Cars(70+(j*130),360,-1,app));
+		}
+		for (int j = 0; j < 6; j++) {
+			this.malos.add(new Cars(50+(j*130),440,-1,app));
+		}
+		for (int j = 0; j < 6; j++) {
+			this.malos.add(new Cars(70+(j*130),200,-1,app));
+		}
 	}
-	
 //	public void run() {
 //		loadStrings();
 //		try {
@@ -61,6 +74,11 @@ public class Logic {
 //	}
 //	
 	public void dibujar() {
+		app.fill(0);
+		for (int i = 0; i < 6; i++) {
+			app.rect(0, 110+(i*80), 800, 50);
+		}
+		
 		for (int i = 0; i < this.malos.size(); i++) {
 			this.malos.get(i).draw(); 
 		}
