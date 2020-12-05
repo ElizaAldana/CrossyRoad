@@ -16,5 +16,19 @@ public class Control {
 	public void dibujar() {
 		this.logic.dibujar();
 	}
+	public void keyPressed() {
+		this.logic.keyPressed();
+	}
+	public void validarChoque() {
+		this.logic.validarChoque();
+	}
+	
+	public void pantallas() {
+		this.logic.pantallas();
+	}
+	
+	public void mouseClicked() {
+		this.logic.mouseClicked();
+	}
 }
 

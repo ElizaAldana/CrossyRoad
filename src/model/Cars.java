@@ -18,8 +18,11 @@ public class Cars extends Objects implements Runnable {
 
 	public void move() {
 		this.posX = this.posX+dirX;
-		if(posX > 800 || posX < 0) {
-			
+		if(posX > 800) {
+			this.posX = 30;
+		}
+		if(posX < 0) {
+			this.posX = 770;
 		}
 	}
 	public void run() {
