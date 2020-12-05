@@ -19,7 +19,7 @@ public class Logic {
 		this.malos = new ArrayList<Cars>();
 		loadStrings();
 		
-		this.screen = 1;
+		this.screen = 0;
 		
 		//visualize time
 		time=0;
@@ -120,6 +120,7 @@ public class Logic {
 			}
 			validarChoque();
 			validarGanar();
+			app.text("Para moverse: A-S-D", 30, 80 );
 		break;
 		case 2:
 			app.text(scoreGame,157,60);
