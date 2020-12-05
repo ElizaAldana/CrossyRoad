@@ -21,7 +21,7 @@ public class Main extends PApplet{
 	
 	public void setup() {
 		this.controller = new Control(this);
-		this.screen = 0;
+		this.screen = 1;
 		//visualize time
 		time=0;
 		second=0;
@@ -34,7 +34,7 @@ public class Main extends PApplet{
 	
 	public void draw() {
 		background(255);
-		this.controller.dibujar();
+		
 		
 		switch(screen) {
 		case 0:
@@ -54,7 +54,7 @@ public class Main extends PApplet{
 			text("Exit", width/2-40,height-100);
 		break;
 		case 1:
-			
+			this.controller.dibujar();
 			score.validateScore();
 		break;
 		case 2:

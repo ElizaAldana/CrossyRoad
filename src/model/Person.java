@@ -10,10 +10,19 @@ public class Person extends Objects {
 
 	public void draw() {
 		this.app.fill(64,224,208);
-		this.app.rect(posX, posY, tam, tam);
+		this.app.ellipse(posX, posY, tam, tam);
 	}
 
 	public void move() {
 		
+	}
+	public void moveR() {
+		this.posX += posX+dirX*4; 
+	}
+	public void moveL() {
+		this.posX += posX+dirX*-4; 
+	}
+	public void moveD() { //ESTE NO ESTÁ BIEN AUN EL MOV HACIA ABAJO
+		this.posX += posX+dirX*-4; 
 	}
 }
